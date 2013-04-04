@@ -28,6 +28,6 @@ DS2413 Slaves starts with '3a'
  
 Must be root! Sodu won't work :(
 
-echo -e '\x01' |dd of=output bs=1 count=1
-echo -e '\x02' |dd of=output bs=1 count=1
-echo -e '\xff' |dd of=output bs=1 count=1
+echo -e '\x01' |dd of=/sys/bus/w1/devices/3a-0000000d2c0e/output bs=1 count=1
+echo -e '\x02' |dd of=/sys/bus/w1/devices/3a-0000000d2c0e/output bs=1 count=1
+echo -e '\xff' |dd of=/sys/bus/w1/devices/3a-0000000d2c0e/output bs=1 count=1
